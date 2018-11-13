@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SimplestApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="pusher_key" content="#{ENV['PUSHER_KEY']}">
+    <meta name="pusher_cluster" content="#{ENV['PUSHER_CLUSTER']}">
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+  </head>
+
+  <body>
+    <%= yield %>
+
+  <div class="ajax-flash hidden" data-thin-man-flash-template>
+    <a class="ajax-flash-dismiss" data-dismiss="alert">&#215;</a>
+    <div class="ajax-flash-content" data-thin-man-flash-content></div>
+  </div>
+
+  <div id="hooch-mask" style="display: none;">
+    <div id="hooch-modal">
+    </div>
+    <div id="hooch-dismiss">×</div>
+  </div>
+
+  </body>
+</html>
