@@ -4,11 +4,12 @@
     <title>SimplestApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <meta name="pusher_key" content="#{ENV['PUSHER_KEY']}">
-    <meta name="pusher_cluster" content="#{ENV['PUSHER_CLUSTER']}">
+    <meta name="pusher_key" content="<%= ENV['PUSHER_KEY'] %>">
+    <meta name="pusher_cluster" content="<%= ENV['PUSHER_CLUSTER'] %>">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src='//js.pusher.com/4.3/pusher.min.js'></script>
 
   </head>
 
